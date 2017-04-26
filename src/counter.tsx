@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from "react";
 import { Component, Store } from "reactive-magic";
 
-export default class Counter extends Component {
+export default class Counter extends Component<{}> {
   store = Store({ count: 0 });
 
   increment = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Component, Derive, Store } from "reactive-magic";
 import MouseStore from "./mouse";
 import SizeStore from "./size";
@@ -8,7 +8,7 @@ const InfoStore = Store({
   y: Derive(() => MouseStore.y / SizeStore.height)
 });
 
-export default class Info extends Component {
+export default class Info extends Component<{}> {
   view() {
     return (
       <ul>
