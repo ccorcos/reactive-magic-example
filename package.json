@@ -1,6 +1,6 @@
 {
   "name": "reactive-magic-example",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "reactive-magic example React application",
   "scripts": {
     "start": "webpack-dev-server --content-base dist",
