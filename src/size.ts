@@ -1,13 +1,15 @@
-import { Store } from "reactive-magic";
+import { Value } from "reactive-magic";
 
-const SizeStore = Store({
+const windowSize = new Value({
   height: window.innerHeight,
-  width: window.innerWidth
-});
+  width: window.innerWidth,
+})
 
 window.onresize = function() {
-  SizeStore.height = window.innerHeight;
-  SizeStore.width = window.innerWidth;
+  windowSize.set({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  })
 };
 
-export default SizeStore;
+export default windowSize;

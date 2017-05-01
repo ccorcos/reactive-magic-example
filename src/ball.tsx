@@ -1,15 +1,16 @@
 import * as React from "react";
 import { Component } from "reactive-magic";
-import MouseStore from "./mouse";
+import mouse from "./mouse";
 
 const r = 10;
 
 export default class Ball extends Component<{}> {
   getStyle(): React.CSSProperties {
+    const {x, y} = mouse.get()
     return {
       position: "absolute",
-      top: MouseStore.y - r,
-      left: MouseStore.x - r,
+      top: y - r,
+      left: x - r,
       width: r * 2,
       height: r * 2,
       borderRadius: r,

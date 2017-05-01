@@ -1,19 +1,17 @@
 import * as React from "react";
-import { Component, Derive, Store } from "reactive-magic";
-import MouseStore from "./mouse";
-import SizeStore from "./size";
+import { Component, DerivedValue } from "reactive-magic";
+import mouse from "./mouse";
+import size from "./size";
 
-const InfoStore = Store({
-  x: Derive(() => MouseStore.x / SizeStore.width),
-  y: Derive(() => MouseStore.y / SizeStore.height)
-});
+const x = new DerivedValue(() => mouse.get().x / size.get().width)
+const y = new DerivedValue(() => mouse.get().y / size.get().height)
 
 export default class Info extends Component<{}> {
   view() {
     return (
       <ul>
-        <li>x: {InfoStore.x}</li>
-        <li>y: {InfoStore.y}</li>
+        <li>x: {x.get()}</li>
+        <li>y: {y.get()}</li>
       </ul>
     );
   }
