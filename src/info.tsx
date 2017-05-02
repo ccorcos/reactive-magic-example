@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Component, DerivedValue } from "reactive-magic";
+import { DerivedValue } from "reactive-magic";
+import Component from "reactive-magic/component"
 import mouse from "./mouse";
 import size from "./size";
 

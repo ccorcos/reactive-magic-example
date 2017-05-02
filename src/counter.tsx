@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Component, Value } from "reactive-magic";
+import { Value } from "reactive-magic";
+import Component from "reactive-magic/component"
 
 export default class Counter extends Component<{}> {
   count = new Value(0);

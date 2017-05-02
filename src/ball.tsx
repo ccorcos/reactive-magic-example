@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Component } from "reactive-magic";
+import Component from "reactive-magic/component"
 import mouse from "./mouse";
 
 const r = 10;
