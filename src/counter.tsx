@@ -1,17 +1,17 @@
-import * as React from "react";
-import { Value } from "reactive-magic";
+import * as React from "react"
+import { Value } from "reactive-magic"
 import Component from "reactive-magic/component"
 
 export default class Counter extends Component<{}> {
-  count = new Value(0);
+  count = new Value(0)
 
   increment = () => {
-    this.count.update(count => count + 1);
-  };
+    this.count.update(count => count + 1)
+  }
 
   decrement = () => {
-    this.count.update(count => count - 1);
-  };
+    this.count.update(count => count - 1)
+  }
 
   view() {
     return (
@@ -20,6 +20,6 @@ export default class Counter extends Component<{}> {
         <span>{this.count.get()}</span>
         <button onClick={this.increment}>{"+"}</button>
       </div>
-    );
+    )
   }
 }
