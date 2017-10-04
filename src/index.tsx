@@ -12,8 +12,8 @@ function app() {
 			<Counter />
 			<Counter />
 			<Counter />
-			{/*<Ball />*/}
-			{/*<Info />*/}
+			<Ball />
+			<Info />
 			<Rederive />
 		</div>
 	)
